@@ -20,12 +20,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xFC51
-#define PRODUCT_ID      0x0058 
+#define VENDOR_ID       0x04D8
+#define PRODUCT_ID      0xEB2D
 #define DEVICE_VER      0x0100
-#define MANUFACTURER    F_YUUCHI
-#define PRODUCT         Lily58
-#define DESCRIPTION     Lily58 is 6×4+5keys column-staggered split keyboard.
+#define MANUFACTURER    Daveyr
+#define PRODUCT         Tiki
+#define DESCRIPTION     Tiki is 6×4+4/5 keys column-staggered split keyboard with optional rotary encoders.
 
 /* key matrix size */
 // Rows are doubled-up
@@ -35,15 +35,32 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // wiring of each half
 #define MATRIX_ROW_PINS { C6, D7, E6, B4, B5 }
 #define MATRIX_COL_PINS { F6, F7, B1, B3, B2, B6 }
-
-/* define tapping term */
-#define TAPPING_TERM 100
+#define DIODE_DIRECTION COL2ROW
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
+#define TAPPING_TERM 100
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
+#define DEBOUNCE 2
+
+/* encoder support */
+#define ENCODERS_PAD_A { F5 }
+#define ENCODERS_PAD_B { F4 }
+#define ENCODERS_PAD_A_RIGHT { F4 }
+#define ENCODERS_PAD_B_RIGHT { F5 }
+#define ENCODER_RESOLUTION 2
+
+#define TAP_CODE_DELAY 10
+
+/* communication between sides */
+#define USE_SERIAL
+#define SERIAL_USE_MULTI_TRANSACTION
+#define SOFT_SERIAL_PIN D2
+
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
+
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 //#define LOCKING_SUPPORT_ENABLE
@@ -51,8 +68,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define LOCKING_RESYNC_ENABLE
 
 /* ws2812 RGB LED */
-#define RGB_DI_PIN D3
-#define RGBLED_NUM 12    // Number of LEDs
+//#define RGB_DI_PIN D3
+//#define RGBLED_NUM 12    // Number of LEDs
 
 /*
  * Feature disable options
