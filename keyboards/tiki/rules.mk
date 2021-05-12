@@ -5,4 +5,3 @@ DEFAULT_FOLDER = tiki/rev1
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 NKRO_ENABLE = yes           # USB Nkey Rollover
 OLED_DRIVER_ENABLE = yes    # OLED display
-DEBOUNCE_TYPE = eager_pk
